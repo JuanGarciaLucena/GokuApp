@@ -1,0 +1,21 @@
+
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+g
+7app/src/main/java/com/juanlucena/gokuapp/models/Item.kt,6\8\6829f287dd520dd19ee805dfcbf7a68193a7bb22
+v
+Fapp/src/main/java/com/juanlucena/gokuapp/di/components/MyComponents.kt,d\5\d539384fff409db5b2773b0bbdb56342ced7fab2
+y
+Iapp/src/main/java/com/juanlucena/gokuapp/objects/NetworkConnectionImpl.kt,c\c\cc764ee7818e76aff526dd091272d74c67d42373
+
+Oapp/src/main/java/com/juanlucena/gokuapp/ui/search/adapters/AnimeListAdapter.kt,9\b\9b1bdcaab5051486f7190d2107919a978f7a4d14
+r
+Bapp/src/main/java/com/juanlucena/gokuapp/services/SearchService.kt,4\5\45c6e7f82da49afda4fea86ada3723a10c77edc0
+k
+;app/src/main/java/com/juanlucena/gokuapp/MainApplication.kt,0\d\0db664e99fb5649bce9afd4356585724895c17fc
+t
+Dapp/src/main/java/com/juanlucena/gokuapp/di/modules/NetworkModule.kt,b\1\b10728c00abfe0257ff5e4d29f1d8ed6243102ff
+u
+Eapp/src/main/java/com/juanlucena/gokuapp/objects/NetworkConnection.kt,b\9\b9c47a73bd25ec08eb7362f03587b46e2a151ec7
+}
+Mapp/src/main/java/com/juanlucena/gokuapp/ui/search/activities/MainActivity.kt,3\7\3736188c229c1e192b45f7878b8fe977863393a9
