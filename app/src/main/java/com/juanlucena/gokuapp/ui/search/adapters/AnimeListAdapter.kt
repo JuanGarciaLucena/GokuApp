@@ -13,7 +13,7 @@ class AnimeListAdapter(val items : ArrayList<String>, val context: Context) : Re
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder?.tvAnimalType?.text = items.get(position)
+        holder.tvAnimalType?.text = items.get(position)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
