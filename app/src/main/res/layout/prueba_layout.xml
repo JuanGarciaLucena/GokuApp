@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pruebasLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/pruebasEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="VALUE"/>
+
+    <Button
+        android:id="@+id/showPruebasBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="MOSTRAR PRUEBAS"/>
+
+    <Button
+        android:id="@+id/addPruebaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="AÑADIR PRUEBA"/>
+
+    <Button
+        android:id="@+id/deletePruebaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ELIMINAR PRUEBA"/>
+
+    <Button
+        android:id="@+id/deleteAllPruebasBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="BORRAR TODAS LAS PRUEBAS"/>
+
+
+
+
+</LinearLayout>

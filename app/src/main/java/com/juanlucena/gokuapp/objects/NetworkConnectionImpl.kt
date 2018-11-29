@@ -10,7 +10,7 @@ class NetworkConnectionImpl : NetworkConnection {
 
     private val retrofit : Retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://api.jikan.moe/v3/anime/1/")
+            .baseUrl("http://192.168.2.74:8080/")
             .build()
 
     override val getRetrofit: Retrofit

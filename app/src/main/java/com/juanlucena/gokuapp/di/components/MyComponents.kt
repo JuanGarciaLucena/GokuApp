@@ -1,8 +1,7 @@
 package com.juanlucena.gokuapp.di.components
 
-import com.juanlucena.gokuapp.ui.search.activities.MainActivity
 import com.juanlucena.gokuapp.di.modules.NetworkModule
-import com.juanlucena.gokuapp.tasks.jobs.DelayJob
+import com.juanlucena.gokuapp.tasks.jobs.*
 import dagger.Component
 import javax.inject.Singleton
 
@@ -11,5 +10,8 @@ import javax.inject.Singleton
 interface MyComponents {
 
     fun inject(delayJob : DelayJob)
-
+    fun inject(getPruebaListJob: GetPruebaListJob)
+    fun inject(addPruebaJob: AddPruebaJob)
+    fun inject(deletePruebaJob: DeletePruebaJob)
+    fun inject(cleanPruebaTableJob: CleanPruebaTableJob)
 }

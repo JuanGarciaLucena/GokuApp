@@ -4,14 +4,16 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import com.juanlucena.gokuapp.MainApplication
 import com.juanlucena.gokuapp.R
+import com.juanlucena.gokuapp.models.Prueba
+import com.juanlucena.gokuapp.tasks.jobs.AddPruebaJob
+import com.juanlucena.gokuapp.tasks.jobs.CleanPruebaTableJob
 import com.juanlucena.gokuapp.ui.search.adapters.AnimeListAdapter
-import com.juanlucena.gokuapp.di.DIManager
-import com.juanlucena.gokuapp.tasks.jobs.DelayJob
+import com.juanlucena.gokuapp.tasks.jobs.GetPruebaListJob
 import kotlinx.android.synthetic.main.activity_main.*
-
-
+import kotlinx.android.synthetic.main.prueba_layout.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,19 +22,32 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.prueba_layout)
 
-        addAnimals()
-
+        //addAnimals()
         val application = applicationContext as MainApplication
-        application.jobManager.addJobInBackground(DelayJob())
 
-        mainActivityList.layoutManager = LinearLayoutManager(this)
+        showPruebasBtn.setOnClickListener {
+            application.jobManager.addJobInBackground(GetPruebaListJob())
+        }
+
+        addPruebaBtn.setOnClickListener {
+            val prueba = Prueba(1, pruebasEditText.text.toString())
+            application.jobManager.addJobInBackground(AddPruebaJob(prueba))
+        }
+
+        deleteAllPruebasBtn.setOnClickListener {
+            application.jobManager.addJobInBackground(CleanPruebaTableJob())
+        }
+
+
+
+        /*mainActivityList.layoutManager = LinearLayoutManager(this)
         mainActivityList.layoutManager = GridLayoutManager(this, 1)
-        mainActivityList.adapter = AnimeListAdapter(animals, this)
+        mainActivityList.adapter = AnimeListAdapter(animals, this)*/
     }
 
-    fun addAnimals() {
+    /*fun addAnimals() {
         animals.add("dog")
         animals.add("cat")
         animals.add("owl")
@@ -65,5 +80,5 @@ class MainActivity : AppCompatActivity() {
         animals.add("monkey")
         animals.add("penguin")
         animals.add("parrot")
-    }
+    }*/
 }
